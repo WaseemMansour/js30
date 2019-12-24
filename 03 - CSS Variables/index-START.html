@@ -21,7 +21,11 @@
   <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
   <style>
-
+    :root {
+      --base: orange;
+      --spacing: 10px;
+      --blur: 10px;
+    }
     /*
       misc styles, nothing to do with CSS variables
     */
@@ -42,10 +46,19 @@
     input {
       width: 100px;
     }
+
+    img {
+      padding: var(--spacing);
+      background-color: var(--base);
+      filter: blur(var(--blur));
+    }
+
+    .hl {
+      color: var(--base);
+    }
   </style>
 
-  <script>
-  </script>
+  <script src="app.js"></script>
 
 </body>
 </html>
