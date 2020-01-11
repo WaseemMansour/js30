@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  background: url('http://wes.io/hx9M/oh-la-la.jpg') center no-repeat;
+  background: url('img/office-581127_1920.jpg') center no-repeat; /* https://pixabay.com/photos/office-creative-coffee-designer-581127/ */
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -14,8 +14,7 @@ html {
   box-sizing: inherit; 
 }
 
-svg {
-  fill:white;
+img {
   background: rgba(0,0,0,0.1);
   padding: 20px;
   border-radius: 50%;
@@ -36,44 +35,65 @@ h2 {
   font-weight: 200;
 }
 
-.plates {
+.todos {
   margin: 0;
   padding: 0;
   text-align: left;
   list-style: none;
 }
 
-.plates li {
+.todos li {
   border-bottom: 1px solid rgba(0,0,0,0.2);
   padding: 10px 0;
   font-weight: 100;
   display: flex;
 }
 
-.plates label {
+.todos label {
   flex: 1;
   cursor: pointer;
 }
 
-.plates input {
+.todos input {
   display: none;
 }
 
-.plates input + label:before {
-  content: '⬜️';
+.todos input + label:before {
+  content: '☐';
   margin-right: 10px;
+  font-size: 1.5em;
 }
 
-.plates input:checked + label:before {
-  content: '🌮';
+.todos input:checked + label:before {
+  content: '☑';
+  text-decoration: none !important;
+}
+
+
+.todos input:checked + label span {
+  text-decoration: line-through;
 }
 
 .add-items {
   margin-top: 20px;
 }
 
-.add-items input {
+.add-items input, button {
   padding: 10px;
   outline: 0;
   border: 1px solid rgba(0,0,0,0.1);
+}
+
+.control {
+  display: flex;
+}
+
+.control button {
+  margin-top: 10px;
+  flex-grow: 1;
+  margin-right: 5px;
+}
+
+.control button:last-of-type {
+  margin-right: 0;
 }
